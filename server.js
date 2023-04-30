@@ -12,7 +12,7 @@ const product_creation_api = require('./api/project_creation_api')
 var cors = require('cors')
 const middleware = require('./middleware')
 
-// const port = process.env.PORT || 5008
+const port = process.env.PORT || 3005
 const app = express()
 app.use(cors())
 app.use(bodyParser.json())
@@ -42,7 +42,7 @@ app.use(middleware.handleError)
 app.use(middleware.notFound)
 
 const server = app.listen(3005, () =>
-  console.log(`Server listening on port ${3005}`)
+  console.log(`Server listening on port ${port}`)
 )
 
 if (require.main !== module) {
