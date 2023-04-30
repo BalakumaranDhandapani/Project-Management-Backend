@@ -7,17 +7,14 @@ const admin_users_api = require('./api/admin_users_api')
 const product_creation_api = require('./api/project_creation_api')
 
 
-
-
 var cors = require('cors')
 const middleware = require('./middleware')
 
-const port = process.env.PORT || 3005
 const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 app.use(cookieParser())
-
+const port = process.env.PORT || 3005
 
 
 app.get('/admin_users_api',admin_users_api.listUser)
