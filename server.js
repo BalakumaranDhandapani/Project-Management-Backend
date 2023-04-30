@@ -41,19 +41,6 @@ app.use(middleware.handleValidationError)
 app.use(middleware.handleError)
 app.use(middleware.notFound)
 
-// var https_options = {
-
-//   key: fs.readFileSync('./key/sieora4.cloudjiffy.net.key'),
-
-//   cert: fs.readFileSync("./key/sieora4.cloudjiffy.net.cer"),
-
-//   ca: [fs.readFileSync('./key/ca.cer'),]
-// };
- 
-
-
-// https.createServer(https_options, app).listen(5008);
-
 const server = app.listen(3005, () =>
   console.log(`Server listening on port ${3005}`)
 )
